@@ -225,6 +225,42 @@
     });
 
     // =============================================
+    // THEME TOGGLE (Dark / Light)
+    // =============================================
+
+    /**
+     * Get the user's preferred theme from localStorage or system preference
+     */
+    function getPreferredTheme() {
+        const stored = localStorage.getItem('theme');
+        if (stored === 'light' || stored === 'dark') {
+            return stored;
+        }
+        // Default to light (modo claro por defecto)
+        return 'light';
+    }
+
+    /**
+     * Apply the theme to the document
+     */
+    function applyTheme(theme) {
+        document.documentElement.setAttribute('data-theme', theme);
+        localStorage.setItem('theme', theme);
+    }
+
+    // Set initial theme on load
+    applyTheme(getPreferredTheme());
+
+    /**
+     * Toggle between dark and light themes
+     */
+    window.toggleTheme = function () {
+        const current = document.documentElement.getAttribute('data-theme');
+        const newTheme = current === 'light' ? 'dark' : 'light';
+        applyTheme(newTheme);
+    };
+
+    // =============================================
     // CONSOLE BRANDING
     // =============================================
     console.log(

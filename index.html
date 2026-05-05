@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CAP Biluka — Centro de Apoyo Profesional. Servicios integrales de psicología, neuropsicología, nutrición, asesoría jurídica y empleabilidad en Bogotá.">
+    <meta name="keywords" content="psicología, neuropsicología, nutrición, asesoría jurídica, empleabilidad, Bogotá, apoyo profesional, salud mental">
+    <meta name="author" content="CAP Biluka">
+    <meta property="og:title" content="CAP Biluka — Centro de Apoyo Profesional">
+    <meta property="og:description" content="Acompañamos a cada persona a sanar, encontrar equilibrio y construir un camino con sentido.">
+    <meta property="og:image" content="https://picsum.photos/seed/biluka-og/1200/630.jpg">
+    <meta property="og:type" content="website">
+    <meta name="robots" content="index, follow">
+
+    <title>CAP Biluka — Centro de Apoyo Profesional</title>
+
+    <!-- Preconnect to external resources -->
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://code.iconify.design">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="canonical" href="https://capbiluka.com">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        heading: ['Oswald', 'sans-serif'],
+                        body: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/Logo.png">
+    <link rel="apple-touch-icon" href="images/Logo.png">
+</head>
+<body class="overflow-x-hidden">
+
+    <!-- ========== NAVIGATION ========== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="background:rgba(5,5,5,0.8);backdrop-filter:blur(12px);">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#inicio" class="flex items-center gap-3 group">
+                <img src="images/Logo.png" alt="CAP Biluka" class="w-10 h-10 rounded-lg object-cover group-hover:scale-110 transition-transform">
+                <div>
+                    <span class="font-heading font-semibold text-base tracking-wide uppercase">CAP Biluka</span>
+                    <span class="block text-[10px] tracking-widest uppercase text-gray-400">Centro de Apoyo Profesional</span>
+                </div>
+            </a>
+            <div class="hidden lg:flex items-center gap-8">
+                <a href="#inicio" class="nav-link text-sm text-gray-300 hover:text-white">Inicio</a>
+                <a href="#nosotros" class="nav-link text-sm text-gray-300 hover:text-white">Nosotros</a>
+                <a href="#pilares" class="nav-link text-sm text-gray-300 hover:text-white">Pilares</a>
+                <a href="#servicios" class="nav-link text-sm text-gray-300 hover:text-white">Servicios</a>
+                <a href="#empleabilidad" class="nav-link text-sm text-gray-300 hover:text-white">Empleabilidad</a>
+                <a href="#donaciones" class="nav-link text-sm text-gray-300 hover:text-white">Donaciones</a>
+                <a href="#contacto" class="nav-link text-sm text-gray-300 hover:text-white">Contacto</a>
+            </div>
+            <div class="hidden lg:flex items-center gap-3">
+                <a href="#donaciones" class="btn-outline px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white">Donar</a>
+                <a href="#contacto" class="btn-primary px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white">Agendar Cita</a>
+            </div>
+            <button id="mobileMenuBtn" class="lg:hidden text-white p-2" aria-label="Abrir menú de navegación">
+                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+            </button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="lg:hidden hidden bg-[#0A0A0A] border-t border-white/5">
+            <div class="px-6 py-6 flex flex-col gap-4">
+                <a href="#inicio" class="text-gray-300 hover:text-white py-2 mobile-link">Inicio</a>
+                <a href="#nosotros" class="text-gray-300 hover:text-white py-2 mobile-link">Nosotros</a>
+                <a href="#pilares" class="text-gray-300 hover:text-white py-2 mobile-link">Pilares</a>
+                <a href="#servicios" class="text-gray-300 hover:text-white py-2 mobile-link">Servicios</a>
+                <a href="#empleabilidad" class="text-gray-300 hover:text-white py-2 mobile-link">Empleabilidad</a>
+                <a href="#donaciones" class="text-gray-300 hover:text-white py-2 mobile-link">Donaciones</a>
+                <a href="#contacto" class="text-gray-300 hover:text-white py-2 mobile-link">Contacto</a>
+                <div class="flex gap-3 pt-4">
+                    <a href="#donaciones" class="btn-outline flex-1 text-center px-4 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white">Donar</a>
+                    <a href="#contacto" class="btn-primary flex-1 text-center px-4 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white">Agendar Cita</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== HERO ========== -->
+    <section id="inicio" class="relative min-h-screen flex items-center overflow-hidden">
+        <!-- Background blobs -->
+        <div class="blob w-96 h-96 bg-[#5423E7] top-20 -left-48 opacity-20" style="filter:blur(120px);"></div>
+        <div class="blob w-72 h-72 bg-purple-500 bottom-20 right-10 opacity-15" style="filter:blur(100px);animation-delay:2s;"></div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-32 pb-20 w-full">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left content -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="anim-slide">
+                        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold uppercase tracking-widest text-purple-400">
+                            <span class="w-2 h-2 rounded-full bg-purple-400 animate-pulse"></span>
+                            Centro de Apoyo Profesional
+                        </span>
+                    </div>
+                    <h1 class="font-heading font-bold text-5xl md:text-6xl lg:text-7xl uppercase tracking-tighter leading-[0.85] anim-blur delay-100">
+                        Sanar,<br>
+                        <span class="gradient-text">crecer</span><br>
+                        y construir
+                    </h1>
+                    <p class="text-gray-400 font-light text-base leading-relaxed max-w-md anim-slide delay-300">
+                        Acompañamos a cada persona a sanar, encontrar equilibrio y construir un camino con sentido. Unimos la psicología con el desarrollo emocional y el proyecto de vida. 💜
+                    </p>
+                    <div class="flex flex-wrap gap-4 anim-slide delay-400">
+                        <a href="#contacto" class="btn-primary px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white inline-flex items-center gap-2">
+                            Agendar cita
+                            <iconify-icon icon="lucide:arrow-right" width="16"></iconify-icon>
+                        </a>
+                        <a href="#servicios" class="btn-outline px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white inline-flex items-center gap-2">
+                            Nuestros servicios
+                        </a>
+                    </div>
+                    <div class="flex items-center gap-8 pt-4 anim-fade delay-500">
+                        <div>
+                            <div class="font-heading font-bold text-2xl stat-number">6+</div>
+                            <div class="text-[10px] uppercase tracking-widest text-gray-500">Servicios</div>
+                        </div>
+                        <div class="w-px h-8 bg-white/10"></div>
+                        <div>
+                            <div class="font-heading font-bold text-2xl stat-number">Híbrido</div>
+                            <div class="text-[10px] uppercase tracking-widest text-gray-500">Atención</div>
+                        </div>
+                        <div class="w-px h-8 bg-white/10"></div>
+                        <div>
+                            <div class="font-heading font-bold text-2xl stat-number">7</div>
+                            <div class="text-[10px] uppercase tracking-widest text-gray-500">Pilares</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Right image -->
+                <div class="lg:col-span-7 relative anim-blur delay-300">
+                    <div class="relative" style="perspective:800px;">
+                        <div class="relative rounded-3xl overflow-hidden shadow-2xl" style="transform:rotateX(2deg) rotateY(-5deg);">
+                            <img src="https://picsum.photos/seed/biluka-hero/900/600.jpg" alt="CAP Biluka - Bienestar integral" class="w-full h-[500px] lg:h-[600px] object-cover" loading="lazy">
+                            <div class="absolute inset-0 bg-gradient-to-t from-[#050505] via-transparent to-transparent"></div>
+                            <div class="absolute inset-0 bg-gradient-to-r from-[#5423E7]/20 to-transparent"></div>
+                        </div>
+                        <!-- Floating card -->
+                        <div class="absolute -bottom-6 -left-6 bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-5 anim-float" style="box-shadow:0 0 40px rgba(84,35,231,0.15);">
+                            <div class="flex items-center gap-3">
+                                <div class="w-12 h-12 rounded-xl bg-[#5423E7]/20 flex items-center justify-center">
+                                    <iconify-icon icon="lucide:heart-handshake" width="24" class="text-purple-400"></iconify-icon>
+                                </div>
+                                <div>
+                                    <div class="font-heading font-semibold text-sm">Apoyo Integral</div>
+                                    <div class="text-[11px] text-gray-400">Salud · Legal · Empleo</div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Second floating card -->
+                        <div class="absolute -top-4 -right-4 bg-black/60 backdrop-blur-md border border-white/10 rounded-2xl p-4 anim-float" style="animation-delay:3s;box-shadow:0 0 30px rgba(84,35,231,0.1);">
+                            <div class="flex items-center gap-2">
+                                <iconify-icon icon="lucide:shield-check" width="18" class="text-green-400"></iconify-icon>
+                                <span class="text-xs text-gray-300">Servicios accesibles</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== MARQUEE ========== -->
+    <div class="border-y border-white/5 py-4 overflow-hidden bg-[#0A0A0A]">
+        <div class="marquee-track">
+            <div class="flex items-center gap-8 px-4">
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:brain" width="14" class="text-purple-500"></iconify-icon> Psicología</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:scan-brain" width="14" class="text-purple-500"></iconify-icon> Neuropsicología</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:apple" width="14" class="text-purple-500"></iconify-icon> Nutrición</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:scale" width="14" class="text-purple-500"></iconify-icon> Asesoría Jurídica</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:briefcase" width="14" class="text-purple-500"></iconify-icon> Empleabilidad</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:graduation-cap" width="14" class="text-purple-500"></iconify-icon> Capacitación</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:hand-heart" width="14" class="text-purple-500"></iconify-icon> Donaciones</span>
+                <span class="text-purple-700">✦</span>
+            </div>
+            <!-- Duplicate for seamless loop -->
+            <div class="flex items-center gap-8 px-4">
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:brain" width="14" class="text-purple-500"></iconify-icon> Psicología</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:scan-brain" width="14" class="text-purple-500"></iconify-icon> Neuropsicología</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:apple" width="14" class="text-purple-500"></iconify-icon> Nutrición</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:scale" width="14" class="text-purple-500"></iconify-icon> Asesoría Jurídica</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:briefcase" width="14" class="text-purple-500"></iconify-icon> Empleabilidad</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:graduation-cap" width="14" class="text-purple-500"></iconify-icon> Capacitación</span>
+                <span class="text-purple-700">✦</span>
+                <span class="text-xs uppercase tracking-widest text-gray-500 whitespace-nowrap flex items-center gap-2"><iconify-icon icon="lucide:hand-heart" width="14" class="text-purple-500"></iconify-icon> Donaciones</span>
+                <span class="text-purple-700">✦</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SOBRE NOSOTROS ========== -->
+    <section id="nosotros" class="relative py-24 overflow-hidden">
+        <div class="blob w-80 h-80 bg-[#5423E7] -bottom-40 -right-20 opacity-10" style="filter:blur(120px);"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left: Image collage -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div class="rounded-2xl overflow-hidden h-48">
+                                <img src="https://picsum.photos/seed/biluka-about1/400/350.jpg" alt="Apoyo comunitario" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden h-64">
+                                <img src="https://picsum.photos/seed/biluka-about2/400/500.jpg" alt="Bienestar emocional" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                            </div>
+                        </div>
+                        <div class="space-y-4 pt-8">
+                            <div class="rounded-2xl overflow-hidden h-64">
+                                <img src="https://picsum.photos/seed/biluka-about3/400/500.jpg" alt="Desarrollo personal" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                            </div>
+                            <div class="rounded-2xl overflow-hidden h-48">
+                                <img src="https://picsum.photos/seed/biluka-about4/400/350.jpg" alt="Comunidad" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700" loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-[#050505]/60 via-transparent to-transparent pointer-events-none"></div>
+                </div>
+
+                <!-- Right: Content -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400 mb-4">Sobre nosotros</span>
+                        <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9]">
+                            Bienestar<br><span class="gradient-text">integral</span> para todos
+                        </h2>
+                    </div>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        El Centro de Apoyo Profesional Biluka es una organización con enfoque social dedicada a brindar servicios integrales de apoyo a poblaciones vulnerables, facilitando el acceso a atención profesional de calidad a bajo costo, tanto de forma presencial como virtual.
+                    </p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/5 border border-white/5 rounded-xl p-5">
+                            <iconify-icon icon="lucide:map-pin" width="20" class="text-purple-400 mb-2"></iconify-icon>
+                            <div class="text-xs font-semibold mb-1">Ubicación</div>
+                            <div class="text-[11px] text-gray-400">Calle 17 #6-57, Of. 404, Bogotá</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/5 rounded-xl p-5">
+                            <iconify-icon icon="lucide:phone" width="20" class="text-purple-400 mb-2"></iconify-icon>
+                            <div class="text-xs font-semibold mb-1">Teléfono</div>
+                            <div class="text-[11px] text-gray-400">+57 315 1021673</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/5 rounded-xl p-5">
+                            <iconify-icon icon="lucide:mail" width="20" class="text-purple-400 mb-2"></iconify-icon>
+                            <div class="text-xs font-semibold mb-1">Correo</div>
+                            <div class="text-[11px] text-gray-400">contacto@capbiluka.com</div>
+                        </div>
+                        <div class="bg-white/5 border border-white/5 rounded-xl p-5">
+                            <iconify-icon icon="lucide:monitor-smartphone" width="20" class="text-purple-400 mb-2"></iconify-icon>
+                            <div class="text-xs font-semibold mb-1">Modalidad</div>
+                            <div class="text-[11px] text-gray-400">Presencial y Virtual</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission & Vision -->
+            <div class="grid md:grid-cols-2 gap-8 mt-20">
+                <div class="relative bg-white/[0.03] border border-white/5 rounded-3xl p-8 lg:p-12 overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-[#5423E7]/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="relative">
+                        <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400 mb-4">Misión</span>
+                        <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight mb-4">Impacto que transforma</h3>
+                        <p class="text-gray-400 font-light leading-relaxed text-sm">
+                            Brindar apoyo integral, accesible y de calidad a personas y comunidades vulnerables, promoviendo su bienestar emocional, social y económico mediante servicios profesionales, orientación y oportunidades de desarrollo.
+                        </p>
+                    </div>
+                </div>
+                <div class="relative bg-white/[0.03] border border-white/5 rounded-3xl p-8 lg:p-12 overflow-hidden group">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-purple-500/10 rounded-full -translate-y-1/2 translate-x-1/2 group-hover:scale-150 transition-transform duration-700"></div>
+                    <div class="relative">
+                        <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400 mb-4">Visión</span>
+                        <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight mb-4">Referencia nacional</h3>
+                        <p class="text-gray-400 font-light leading-relaxed text-sm">
+                            Ser un centro de referencia en Colombia en la atención social integral, reconocido por su impacto positivo en la calidad de vida de las comunidades y por su compromiso con la inclusión, la equidad y el desarrollo humano.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== 7 PILARES ========== -->
+    <section id="pilares" class="relative py-24 bg-[#0A0A0A] overflow-hidden">
+        <div class="blob w-96 h-96 bg-[#5423E7] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-10" style="filter:blur(120px);"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="text-center mb-16">
+                <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400 mb-4">Nuestros pilares</span>
+                <h2 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl uppercase tracking-tighter leading-[0.9]">
+                    Los <span class="gradient-text">7 pilares</span> de Biluka
+                </h2>
+                <p class="text-gray-400 font-light mt-4 max-w-2xl mx-auto">
+                    Cada pilar sostiene nuestra misión de transformar vidas a través del acompañamiento profesional integral.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Pilar 1 -->
+                <div class="pillar-card bg-white/[0.03] border border-white/5 rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5423E7] to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="pillar-icon w-14 h-14 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:heart-handshake" width="28" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Pilar 01</span>
+                    <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2 mb-3">Impacto Social y Comunidad</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">
+                        Compromiso con el bienestar de poblaciones vulnerables, promoviendo inclusión, equidad y apoyo solidario mediante programas accesibles y donaciones.
+                    </p>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="pillar-card bg-white/[0.03] border border-white/5 rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5423E7] to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="pillar-icon w-14 h-14 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:brain" width="28" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Pilar 02</span>
+                    <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2 mb-3">Atención Integral en Salud</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">
+                        Psicología individual y familiar, neuropsicología y asesoría jurídica con enfoque humano, preventivo y de mejora de la calidad de vida.
+                    </p>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="pillar-card bg-white/[0.03] border border-white/5 rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5423E7] to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="pillar-icon w-14 h-14 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:scale" width="28" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Pilar 03</span>
+                    <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2 mb-3">Orientación y Apoyo Legal</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">
+                        Acompañamiento jurídico accesible para personas que requieren asesoría en temas legales, garantizando orientación clara y oportuna.
+                    </p>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="pillar-card bg-white/[0.03] border border-white/5 rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5423E7] to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="pillar-icon w-14 h-14 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:briefcase" width="28" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Pilar 04</span>
+                    <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2 mb-3">Empleabilidad y Desarrollo</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">
+                        Procesos de selección, preparación laboral y ubicación en empleo temporal para mejorar la estabilidad económica y el proyecto de vida.
+                    </p>
+                </div>
+
+                <!-- Pilar 5 -->
+                <div class="pillar-card bg-white/[0.03] border border-white/5 rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5423E7] to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="pillar-icon w-14 h-14 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:graduation-cap" width="28" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Pilar 05</span>
+                    <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2 mb-3">Educación y Capacitación</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">
+                        Programas formativos para colegios, empresas y comunidades en habilidades para la vida, salud mental, empleabilidad y crecimiento personal.
+                    </p>
+                </div>
+
+                <!-- Pilar 6 -->
+                <div class="pillar-card bg-white/[0.03] border border-white/5 rounded-3xl p-8 relative overflow-hidden group">
+                    <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5423E7] to-purple-400 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                    <div class="pillar-icon w-14 h-14 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6">
+                        <iconify-icon icon="lucide:monitor-smartphone" width="28" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Pilar 06</span>
+                    <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2 mb-3">Atención Híbrida</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">
+                        Servicios presenciales en nuestra sede de Bogotá y atención virtual, ampliando el alcance a más personas en todo el territorio nacional.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Pilar 7 - Featured -->
+            <div class="mt-6 relative bg-gradient-to-r from-[#5423E7]/20 to-purple-500/10 border border-[#5423E7]/30 rounded-3xl p-8 lg:p-12 overflow-hidden group pillar-card">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-[#5423E7] to-purple-400"></div>
+                <div class="grid lg:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-purple-300">Pilar 07</span>
+                        <h3 class="font-heading font-semibold text-2xl md:text-3xl uppercase tracking-tight mt-2 mb-4">Solidaridad y Donaciones</h3>
+                        <p class="text-gray-300 font-light leading-relaxed">
+                            Gestión de recursos y donaciones para apoyar a personas y grupos vulnerables, fortaleciendo el impacto social. Cada aporte transforma vidas y construye comunidad.
+                        </p>
+                        <a href="#donaciones" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white mt-6">
+                            Donar ahora
+                            <iconify-icon icon="lucide:heart" width="14"></iconify-icon>
+                        </a>
+                    </div>
+                    <div class="flex justify-center">
+                        <div class="w-48 h-48 rounded-full bg-[#5423E7]/20 flex items-center justify-center relative">
+                            <div class="w-32 h-32 rounded-full bg-[#5423E7]/30 flex items-center justify-center">
+                                <iconify-icon icon="lucide:hand-heart" width="56" class="text-purple-300"></iconify-icon>
+                            </div>
+                            <div class="absolute w-48 h-48 rounded-full border border-[#5423E7]/20 animate-ping" style="animation-duration:3s;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== SERVICIOS ========== -->
+    <section id="servicios" class="relative py-24 overflow-hidden">
+        <div class="blob w-72 h-72 bg-purple-500 top-20 right-0 opacity-10" style="filter:blur(120px);"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400 mb-4">Servicios</span>
+                <h2 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl uppercase tracking-tighter leading-[0.9]">
+                    Acompañamiento<br><span class="gradient-text">profesional</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Psicología Individual -->
+                <div class="service-item bg-white/[0.03] border border-white/5 rounded-3xl p-8 group cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6 group-hover:bg-[#5423E7]/20 transition-colors">
+                        <iconify-icon icon="lucide:user" width="30" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg uppercase tracking-tight mb-3">Psicología Individual</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-4">
+                        Acompañamiento terapéutico personalizado para el abordaje de dificultades emocionales, ansiedad, depresión, duelo y crecimiento personal.
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-purple-400 text-xs font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
+                        Más info <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+                    </span>
+                </div>
+
+                <!-- Psicología Familiar -->
+                <div class="service-item bg-white/[0.03] border border-white/5 rounded-3xl p-8 group cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6 group-hover:bg-[#5423E7]/20 transition-colors">
+                        <iconify-icon icon="lucide:users" width="30" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg uppercase tracking-tight mb-3">Psicología Familiar</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-4">
+                        Intervención en dinámicas familiares, resolución de conflictos, comunicación efectiva y fortalecimiento de vínculos afectivos.
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-purple-400 text-xs font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
+                        Más info <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+                    </span>
+                </div>
+
+                <!-- Neuropsicología -->
+                <div class="service-item bg-white/[0.03] border border-white/5 rounded-3xl p-8 group cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6 group-hover:bg-[#5423E7]/20 transition-colors">
+                        <iconify-icon icon="lucide:scan-brain" width="30" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg uppercase tracking-tight mb-3">Neuropsicología</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-4">
+                        Evaluación y rehabilitación de funciones cognitivas, atención, memoria y funciones ejecutivas para mejorar la calidad de vida.
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-purple-400 text-xs font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
+                        Más info <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+                    </span>
+                </div>
+
+                <!-- Nutrición -->
+                <div class="service-item bg-white/[0.03] border border-white/5 rounded-3xl p-8 group cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6 group-hover:bg-[#5423E7]/20 transition-colors">
+                        <iconify-icon icon="lucide:apple" width="30" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg uppercase tracking-tight mb-3">Nutrición</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-4">
+                        Orientación nutricional personalizada para promover hábitos saludables, prevención de enfermedades y bienestar físico y emocional.
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-purple-400 text-xs font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
+                        Más info <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+                    </span>
+                </div>
+
+                <!-- Asesoría Jurídica -->
+                <div class="service-item bg-white/[0.03] border border-white/5 rounded-3xl p-8 group cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6 group-hover:bg-[#5423E7]/20 transition-colors">
+                        <iconify-icon icon="lucide:scale" width="30" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg uppercase tracking-tight mb-3">Asesoría Jurídica</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-4">
+                        Acompañamiento legal accesible en derecho civil, familia, laboral y protección de derechos para personas en condición de vulnerabilidad.
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-purple-400 text-xs font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
+                        Más info <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+                    </span>
+                </div>
+
+                <!-- Capacitación -->
+                <div class="service-item bg-white/[0.03] border border-white/5 rounded-3xl p-8 group cursor-pointer">
+                    <div class="w-16 h-16 rounded-2xl bg-[#5423E7]/10 flex items-center justify-center mb-6 group-hover:bg-[#5423E7]/20 transition-colors">
+                        <iconify-icon icon="lucide:presentation" width="30" class="text-purple-400"></iconify-icon>
+                    </div>
+                    <h3 class="font-heading font-semibold text-lg uppercase tracking-tight mb-3">Capacitación</h3>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed mb-4">
+                        Programas formativos para colegios, empresas y comunidades en habilidades para la vida, salud mental y crecimiento personal.
+                    </p>
+                    <span class="inline-flex items-center gap-1 text-purple-400 text-xs font-semibold uppercase tracking-wider group-hover:gap-2 transition-all">
+                        Más info <iconify-icon icon="lucide:arrow-right" width="12"></iconify-icon>
+                    </span>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="text-center mt-12">
+                <a href="#contacto" class="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white">
+                    Agendar una cita
+                    <iconify-icon icon="lucide:calendar" width="14"></iconify-icon>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== EMPLEABILIDAD ========== -->
+    <section id="empleabilidad" class="relative py-24 bg-[#0A0A0A] overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400">Pilar 04</span>
+                    <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9]">
+                        Empleabilidad<br>y <span class="gradient-text">desarrollo profesional</span>
+                    </h2>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Apoyamos a personas en su camino hacia la estabilidad laboral y económica. A través de procesos de selección, preparación laboral y ubicación en empleo temporal, contribuimos a fortalecer el proyecto de vida de cada persona.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4 bg-white/[0.03] border border-white/5 rounded-xl p-5 hover:border-purple-500/30 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-[#5423E7]/10 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="lucide:file-search" width="20" class="text-purple-400"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm uppercase tracking-tight mb-1">Procesos de Selección</h4>
+                                <p class="text-gray-400 font-light text-xs leading-relaxed">Acompañamiento completo en la búsqueda y selección laboral según tu perfil profesional.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white/[0.03] border border-white/5 rounded-xl p-5 hover:border-purple-500/30 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-[#5423E7]/10 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="lucide:target" width="20" class="text-purple-400"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm uppercase tracking-tight mb-1">Preparación Laboral</h4>
+                                <p class="text-gray-400 font-light text-xs leading-relaxed">Formación en hoja de vida, entrevistas y competencias para el mundo laboral.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4 bg-white/[0.03] border border-white/5 rounded-xl p-5 hover:border-purple-500/30 transition-colors">
+                            <div class="w-10 h-10 rounded-xl bg-[#5423E7]/10 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="lucide:building-2" width="20" class="text-purple-400"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="font-heading font-semibold text-sm uppercase tracking-tight mb-1">Ubicación Laboral</h4>
+                                <p class="text-gray-400 font-light text-xs leading-relaxed">Conexión con empresas y oportunidades de empleo temporal y permanente.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#contacto" class="btn-primary inline-flex items-center gap-2 px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider text-white">
+                        Inscríbete aquí
+                        <iconify-icon icon="lucide:arrow-right" width="14"></iconify-icon>
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="rounded-3xl overflow-hidden" style="perspective:800px;">
+                        <img src="https://picsum.photos/seed/biluka-employ/700/500.jpg" alt="Empleabilidad CAP Biluka" class="w-full h-[400px] lg:h-[500px] object-cover" style="transform:rotateX(2deg) rotateY(-5deg);transition:transform 0.7s ease;" onmouseenter="this.style.transform='rotateX(0) rotateY(0)'" onmouseleave="this.style.transform='rotateX(2deg) rotateY(-5deg)'" loading="lazy">
+                    </div>
+                    <div class="absolute -bottom-6 -right-6 bg-[#5423E7] rounded-2xl p-6 shadow-2xl" style="box-shadow:0 0 40px rgba(84,35,231,0.3);">
+                        <div class="font-heading font-bold text-3xl text-white">100%</div>
+                        <div class="text-[10px] uppercase tracking-widest text-purple-200">Compromiso</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== PROGRAMAS SOCIALES ========== -->
+    <section id="programas" class="relative py-24 overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400 mb-4">Programas</span>
+                <h2 class="font-heading font-bold text-4xl md:text-5xl lg:text-6xl uppercase tracking-tighter leading-[0.9]">
+                    Programas <span class="gradient-text">sociales</span>
+                </h2>
+                <p class="text-gray-400 font-light mt-4 max-w-2xl mx-auto">
+                    Desarrollamos iniciativas que impactan positivamente a comunidades vulnerables en Bogotá y todo Colombia.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-96">
+                    <img src="https://picsum.photos/seed/biluka-prog1/500/600.jpg" alt="Salud mental comunitaria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Salud Mental</span>
+                        <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2">Atención comunitaria</h3>
+                        <p class="text-gray-300 font-light text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            Jornadas de atención psicológica gratuita y acceso a terapia de bajo costo para comunidades vulnerables.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-96">
+                    <img src="https://picsum.photos/seed/biluka-prog2/500/600.jpg" alt="Educación para la vida" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Educación</span>
+                        <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2">Capacitación en colegios</h3>
+                        <p class="text-gray-300 font-light text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            Talleres de habilidades para la vida, prevención del bullying y fortalecimiento emocional en estudiantes.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative rounded-3xl overflow-hidden group cursor-pointer h-96">
+                    <img src="https://picsum.photos/seed/biluka-prog3/500/600.jpg" alt="Inclusión laboral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 right-0 p-8">
+                        <span class="text-[10px] font-bold uppercase tracking-widest text-purple-400">Inclusión</span>
+                        <h3 class="font-heading font-semibold text-xl uppercase tracking-tight mt-2">Ruta de empleabilidad</h3>
+                        <p class="text-gray-300 font-light text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+                            Acompañamiento integral desde la formación hasta la inserción laboral para personas en condición de vulnerabilidad.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== DONACIONES ========== -->
+    <section id="donaciones" class="relative py-24 bg-[#0A0A0A] overflow-hidden">
+        <div class="blob w-96 h-96 bg-[#5423E7] top-0 left-0 opacity-10" style="filter:blur(120px);"></div>
+        <div class="blob w-72 h-72 bg-purple-500 bottom-0 right-0 opacity-10" style="filter:blur(120px);animation-delay:2s;"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="space-y-8">
+                    <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400">Solidaridad</span>
+                    <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9]">
+                        Tu aporte<br><span class="gradient-text">transforma vidas</span>
+                    </h2>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Cada donación permite que personas en condición de vulnerabilidad accedan a servicios profesionales de calidad. Garantizamos transparencia en el uso de todos los recursos recibidos.
+                    </p>
+                    <div class="grid grid-cols-3 gap-4">
+                        <div class="text-center p-4 bg-white/[0.03] border border-white/5 rounded-xl">
+                            <iconify-icon icon="lucide:heart" width="24" class="text-purple-400 mb-2"></iconify-icon>
+                            <div class="text-[10px] uppercase tracking-widest text-gray-400">Impacto directo</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/[0.03] border border-white/5 rounded-xl">
+                            <iconify-icon icon="lucide:shield-check" width="24" class="text-purple-400 mb-2"></iconify-icon>
+                            <div class="text-[10px] uppercase tracking-widest text-gray-400">Transparencia</div>
+                        </div>
+                        <div class="text-center p-4 bg-white/[0.03] border border-white/5 rounded-xl">
+                            <iconify-icon icon="lucide:users" width="24" class="text-purple-400 mb-2"></iconify-icon>
+                            <div class="text-[10px] uppercase tracking-widest text-gray-400">Comunidad</div>
+                        </div>
+                    </div>
+                    <div class="bg-white/[0.03] border border-white/5 rounded-2xl p-6">
+                        <h4 class="font-heading font-semibold text-sm uppercase tracking-tight mb-4">¿Cómo se usan los recursos?</h4>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <span class="text-gray-400 text-xs">Subsidios de atención psicológica y jurídica</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <span class="text-gray-400 text-xs">Programas de empleabilidad para población vulnerable</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <span class="text-gray-400 text-xs">Jornadas comunitarias y talleres gratuitos</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <div class="w-2 h-2 rounded-full bg-purple-400"></div>
+                                <span class="text-gray-400 text-xs">Fortalecimiento institucional</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Donation Form -->
+                <div class="bg-white/[0.03] border border-white/5 rounded-3xl p-8 lg:p-12">
+                    <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight mb-6">Haz tu donación</h3>
+                    <form id="donationForm" class="space-y-6">
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Nombre completo</label>
+                            <input type="text" required class="input-field" placeholder="Tu nombre">
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Correo electrónico</label>
+                            <input type="email" required class="input-field" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-3 block">Monto de donación</label>
+                            <div class="grid grid-cols-3 gap-3 mb-3">
+                                <button type="button" class="donation-amount border border-white/10 rounded-xl py-3 text-sm font-semibold text-center" data-amount="10000">$10.000</button>
+                                <button type="button" class="donation-amount border border-white/10 rounded-xl py-3 text-sm font-semibold text-center" data-amount="25000">$25.000</button>
+                                <button type="button" class="donation-amount border border-white/10 rounded-xl py-3 text-sm font-semibold text-center" data-amount="50000">$50.000</button>
+                                <button type="button" class="donation-amount border border-white/10 rounded-xl py-3 text-sm font-semibold text-center" data-amount="100000">$100.000</button>
+                                <button type="button" class="donation-amount border border-white/10 rounded-xl py-3 text-sm font-semibold text-center" data-amount="200000">$200.000</button>
+                                <button type="button" class="donation-amount border border-white/10 rounded-xl py-3 text-sm font-semibold text-center" data-amount="0">Otro</button>
+                            </div>
+                            <div id="customAmountContainer" class="hidden">
+                                <input type="number" class="input-field" placeholder="Ingresa el monto en COP">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Mensaje (opcional)</label>
+                            <textarea rows="3" class="input-field resize-none" placeholder="¿Quieres dedicar tu donación?"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white flex items-center justify-center gap-2">
+                            <iconify-icon icon="lucide:heart" width="16"></iconify-icon>
+                            Donar ahora
+                        </button>
+                        <p class="text-[10px] text-gray-500 text-center">
+                            Al donar, aceptas nuestra <a href="#" class="text-purple-400 hover:underline" onclick="openModal('privacyModal');return false;">Política de Privacidad</a> y el <a href="#" class="text-purple-400 hover:underline" onclick="openModal('termsModal');return false;">Tratamiento de Datos</a>.
+                        </p>
+                    </form>
+                    <div id="donationSuccess" class="hidden text-center py-8">
+                        <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+                            <iconify-icon icon="lucide:check-circle" width="32" class="text-green-400"></iconify-icon>
+                        </div>
+                        <h4 class="font-heading font-semibold text-xl uppercase tracking-tight mb-2">¡Gracias!</h4>
+                        <p class="text-gray-400 font-light text-sm">Tu donación será procesada. Pronto recibirás confirmación por correo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CONTACTO ========== -->
+    <section id="contacto" class="relative py-24 overflow-hidden">
+        <div class="blob w-80 h-80 bg-[#5423E7] bottom-0 left-1/4 opacity-10" style="filter:blur(120px);"></div>
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-16">
+                <!-- Left Info -->
+                <div class="space-y-8">
+                    <div>
+                        <span class="inline-block text-[10px] font-bold uppercase tracking-widest text-purple-400 mb-4">Contacto</span>
+                        <h2 class="font-heading font-bold text-4xl md:text-5xl uppercase tracking-tighter leading-[0.9]">
+                            Estamos<br><span class="gradient-text">para ti</span>
+                        </h2>
+                    </div>
+                    <p class="text-gray-400 font-light leading-relaxed">
+                        Si necesitas apoyo profesional, quieres agendar una cita o deseas más información sobre nuestros servicios, no dudes en contactarnos. Estamos aquí para acompañarte.
+                    </p>
+
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#5423E7]/10 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="lucide:map-pin" width="22" class="text-purple-400"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1">Dirección</h4>
+                                <p class="text-gray-400 font-light text-sm">Calle 17 #6-57, Oficina 404<br>Edificio Alejandro, Centro<br>Bogotá D.C., Colombia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#5423E7]/10 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="lucide:phone" width="22" class="text-purple-400"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1">Teléfono</h4>
+                                <p class="text-gray-400 font-light text-sm">+57 315 1021673</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#5423E7]/10 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="lucide:mail" width="22" class="text-purple-400"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1">Correo electrónico</h4>
+                                <p class="text-gray-400 font-light text-sm">contacto@capbiluka.com</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 rounded-xl bg-[#5423E7]/10 flex items-center justify-center flex-shrink-0">
+                                <iconify-icon icon="lucide:clock" width="22" class="text-purple-400"></iconify-icon>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-sm mb-1">Horario de atención</h4>
+                                <p class="text-gray-400 font-light text-sm">Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 1:00 PM</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Map embed -->
+                    <div class="rounded-2xl overflow-hidden border border-white/5 h-48">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3976.8!2d-74.07!3d4.6!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNMKwMzYnMDAuMCJOIDc0wrAwNCcxMi4wIlc!5e0!3m2!1ses!2sco!4v1" width="100%" height="100%" style="border:0;filter:invert(90%) hue-rotate(180deg);" allowfullscreen="" loading="lazy" title="Ubicación CAP Biluka"></iframe>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white/[0.03] border border-white/5 rounded-3xl p-8 lg:p-12">
+                    <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight mb-6">Agendar cita o escribirnos</h3>
+                    <form id="contactForm" class="space-y-5">
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Nombre *</label>
+                                <input type="text" required class="input-field" placeholder="Tu nombre">
+                            </div>
+                            <div>
+                                <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Teléfono *</label>
+                                <input type="tel" required class="input-field" placeholder="+57 ...">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Correo electrónico *</label>
+                            <input type="email" required class="input-field" placeholder="correo@ejemplo.com">
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Servicio de interés</label>
+                            <select class="input-field select-arrow">
+                                <option value="">Selecciona un servicio</option>
+                                <option value="psicologia-ind">Psicología Individual</option>
+                                <option value="psicologia-fam">Psicología Familiar</option>
+                                <option value="neuropsicologia">Neuropsicología</option>
+                                <option value="nutricion">Nutrición</option>
+                                <option value="asesoria-juridica">Asesoría Jurídica</option>
+                                <option value="empleabilidad">Empleabilidad</option>
+                                <option value="capacitacion">Capacitación</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Modalidad preferida</label>
+                            <div class="flex gap-4">
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="modalidad" value="presencial" class="accent-purple-500">
+                                    <span class="text-sm text-gray-300">Presencial</span>
+                                </label>
+                                <label class="flex items-center gap-2 cursor-pointer">
+                                    <input type="radio" name="modalidad" value="virtual" class="accent-purple-500">
+                                    <span class="text-sm text-gray-300">Virtual</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <label class="text-[10px] uppercase tracking-widest text-gray-400 mb-2 block">Mensaje</label>
+                            <textarea rows="4" class="input-field resize-none" placeholder="Cuéntanos brevemente cómo podemos ayudarte..."></textarea>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <input type="checkbox" required id="consent" class="accent-purple-500 mt-1">
+                            <label for="consent" class="text-[11px] text-gray-400 leading-relaxed">
+                                Autorizo el tratamiento de mis datos personales conforme a la <a href="#" class="text-purple-400 hover:underline" onclick="openModal('privacyModal');return false;">Política de Privacidad</a> y la Ley 1581 de 2012.
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-primary w-full py-4 rounded-full text-xs font-bold uppercase tracking-wider text-white flex items-center justify-center gap-2">
+                            Enviar solicitud
+                            <iconify-icon icon="lucide:send" width="14"></iconify-icon>
+                        </button>
+                    </form>
+                    <div id="contactSuccess" class="hidden text-center py-8">
+                        <div class="w-16 h-16 rounded-full bg-green-500/20 flex items-center justify-center mx-auto mb-4">
+                            <iconify-icon icon="lucide:check-circle" width="32" class="text-green-400"></iconify-icon>
+                        </div>
+                        <h4 class="font-heading font-semibold text-xl uppercase tracking-tight mb-2">¡Mensaje enviado!</h4>
+                        <p class="text-gray-400 font-light text-sm">Nos pondremos en contacto contigo lo antes posible. 💜</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="bg-[#0A0A0A] border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-6 py-16">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+                <!-- Col 1 -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3">
+                        <img src="images/Logo.png" alt="CAP Biluka" class="w-10 h-10 rounded-lg object-cover">
+                        <div>
+                            <span class="font-heading font-semibold text-base tracking-wide uppercase">CAP Biluka</span>
+                            <span class="block text-[10px] tracking-widest uppercase text-gray-500">Centro de Apoyo Profesional</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-400 font-light text-sm leading-relaxed">
+                        Acompañamos a cada persona a sanar, encontrar equilibrio y construir un camino con sentido. 💜
+                    </p>
+                    <div class="flex items-center gap-3 pt-2">
+                        <a href="#" class="social-icon" aria-label="Instagram">
+                            <iconify-icon icon="lucide:instagram" width="16"></iconify-icon>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="Facebook">
+                            <iconify-icon icon="lucide:facebook" width="16"></iconify-icon>
+                        </a>
+                        <a href="#" class="social-icon" aria-label="LinkedIn">
+                            <iconify-icon icon="lucide:linkedin" width="16"></iconify-icon>
+                        </a>
+                        <a href="https://wa.me/573151021673" target="_blank" class="social-icon hover:text-green-400 hover:border-green-500/30" aria-label="WhatsApp">
+                            <iconify-icon icon="lucide:message-circle" width="16"></iconify-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Col 2 -->
+                <div>
+                    <h4 class="font-heading font-semibold text-sm uppercase tracking-wider mb-6">Servicios</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#servicios" class="footer-link">Psicología Individual</a></li>
+                        <li><a href="#servicios" class="footer-link">Psicología Familiar</a></li>
+                        <li><a href="#servicios" class="footer-link">Neuropsicología</a></li>
+                        <li><a href="#servicios" class="footer-link">Nutrición</a></li>
+                        <li><a href="#servicios" class="footer-link">Asesoría Jurídica</a></li>
+                        <li><a href="#empleabilidad" class="footer-link">Empleabilidad</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3 -->
+                <div>
+                    <h4 class="font-heading font-semibold text-sm uppercase tracking-wider mb-6">Navegación</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#inicio" class="footer-link">Inicio</a></li>
+                        <li><a href="#nosotros" class="footer-link">Sobre nosotros</a></li>
+                        <li><a href="#pilares" class="footer-link">Nuestros pilares</a></li>
+                        <li><a href="#programas" class="footer-link">Programas sociales</a></li>
+                        <li><a href="#donaciones" class="footer-link">Donaciones</a></li>
+                        <li><a href="#contacto" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4 -->
+                <div>
+                    <h4 class="font-heading font-semibold text-sm uppercase tracking-wider mb-6">Legal</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#" onclick="openModal('privacyModal');return false;" class="footer-link">Política de Privacidad</a></li>
+                        <li><a href="#" onclick="openModal('termsModal');return false;" class="footer-link">Términos y Condiciones</a></li>
+                        <li><a href="#" onclick="openModal('cookiesModal');return false;" class="footer-link">Política de Cookies</a></li>
+                        <li><a href="#" onclick="openModal('dataModal');return false;" class="footer-link">Tratamiento de Datos</a></li>
+                    </ul>
+                    <div class="mt-6 p-4 bg-white/[0.03] border border-white/5 rounded-xl">
+                        <div class="text-[10px] uppercase tracking-widest text-gray-500 mb-1">Corporativo BILUKA</div>
+                        <div class="text-xs text-gray-400">contacto@capbiluka.com</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/5 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-gray-500 text-xs">
+                    &copy; 2025 Centro de Apoyo Profesional Biluka. Todos los derechos reservados.
+                </p>
+                <p class="text-gray-600 text-[10px]">
+                    Cumplimiento Ley 1581 de 2012 (Habeas Data) &middot; Colombia
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========== WHATSAPP FLOATING BUTTON ========== -->
+    <a href="https://wa.me/573151021673?text=Hola%2C%20me%20gustaría%20obtener%20más%20información%20sobre%20los%20servicios%20de%20CAP%20Biluka" target="_blank" class="whatsapp-btn" aria-label="Contactar por WhatsApp">
+        <iconify-icon icon="lucide:message-circle" width="28" class="text-white"></iconify-icon>
+    </a>
+
+    <!-- ========== COOKIE BANNER ========== -->
+    <div id="cookieBanner" class="cookie-banner fixed bottom-0 left-0 right-0 z-50 bg-[#0A0A0A] border-t border-white/10 p-6" style="-webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);">
+        <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-start gap-3">
+                <iconify-icon icon="lucide:cookie" width="20" class="text-purple-400 mt-0.5 flex-shrink-0"></iconify-icon>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Utilizamos cookies para mejorar tu experiencia, analizar el tráfico web y recordar tus preferencias. Puedes aceptar o rechazar las cookies no esenciales. <a href="#" onclick="openModal('cookiesModal');return false;" class="text-purple-400 hover:underline">Más información</a>.
+                </p>
+            </div>
+            <div class="flex gap-3 flex-shrink-0">
+                <button onclick="acceptCookies()" class="btn-primary px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white">Aceptar</button>
+                <button onclick="rejectCookies()" class="btn-outline px-6 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white">Rechazar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== MODALS ========== -->
+
+    <!-- Privacy Modal -->
+    <div id="privacyModal" class="modal-overlay fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('privacyModal')"></div>
+        <div class="modal-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 max-w-2xl w-[90%] max-h-[80vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight">Política de Privacidad</h3>
+                <button onclick="closeModal('privacyModal')" class="modal-close-btn">
+                    <iconify-icon icon="lucide:x" width="20"></iconify-icon>
+                </button>
+            </div>
+            <div class="space-y-4 text-gray-400 font-light text-sm leading-relaxed">
+                <p><strong class="text-white">Responsable:</strong> Centro de Apoyo Profesional Biluka</p>
+                <p><strong class="text-white">Datos que recogemos:</strong> Nombre, teléfono, correo electrónico y motivo de consulta.</p>
+                <p><strong class="text-white">Finalidad del tratamiento:</strong></p>
+                <ul class="list-disc list-inside space-y-1 ml-4">
+                    <li>Contacto con usuarios</li>
+                    <li>Prestación de servicios profesionales</li>
+                    <li>Información institucional</li>
+                    <li>Gestión de donaciones</li>
+                </ul>
+                <p><strong class="text-white">Compartir datos:</strong> No compartimos datos personales con terceros sin autorización expresa del titular.</p>
+                <p><strong class="text-white">Derechos del titular:</strong> Conforme a la Ley 1581 de 2012, tienes derecho a conocer, actualizar, rectificar y eliminar tus datos personales.</p>
+                <p><strong class="text-white">Seguridad:</strong> Implementamos medidas técnicas, administrativas y humanas para proteger la información personal.</p>
+                <p><strong class="text-white">Vigencia:</strong> Los datos serán conservados durante el tiempo necesario para cumplir con la finalidad del tratamiento y las obligaciones legales.</p>
+                <p><strong class="text-white">Contacto:</strong> Para ejercer tus derechos, escribe a contacto@capbiluka.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Terms Modal -->
+    <div id="termsModal" class="modal-overlay fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('termsModal')"></div>
+        <div class="modal-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 max-w-2xl w-[90%] max-h-[80vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight">Términos y Condiciones</h3>
+                <button onclick="closeModal('termsModal')" class="modal-close-btn">
+                    <iconify-icon icon="lucide:x" width="20"></iconify-icon>
+                </button>
+            </div>
+            <div class="space-y-4 text-gray-400 font-light text-sm leading-relaxed">
+                <p><strong class="text-white">Uso del sitio web:</strong> El usuario se compromete a utilizar el sitio de forma adecuada y conforme a la ley colombiana.</p>
+                <p><strong class="text-white">Responsabilidad del usuario:</strong> La información brindada por el usuario debe ser veraz y actualizada.</p>
+                <p><strong class="text-white">Limitación de responsabilidad:</strong> El Centro de Apoyo Profesional Biluka no se hace responsable por el uso indebido de la información publicada en el sitio.</p>
+                <p><strong class="text-white">Prestación de servicios:</strong> Los servicios se sujetan a disponibilidad y a las condiciones específicas de cada programa.</p>
+                <p><strong class="text-white">Propiedad intelectual:</strong> Todo el contenido del sitio web (textos, imágenes, diseño) es propiedad de CAP Biluka y está protegido por las leyes de propiedad intelectual.</p>
+                <p><strong class="text-white">Modificaciones:</strong> Nos reservamos el derecho de modificar estos términos en cualquier momento. Las modificaciones serán publicadas en esta página.</p>
+                <p><strong class="text-white">Legislación aplicable:</strong> Estos términos se rigen por las leyes de la República de Colombia.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookies Modal -->
+    <div id="cookiesModal" class="modal-overlay fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('cookiesModal')"></div>
+        <div class="modal-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 max-w-2xl w-[90%] max-h-[80vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight">Política de Cookies</h3>
+                <button onclick="closeModal('cookiesModal')" class="modal-close-btn">
+                    <iconify-icon icon="lucide:x" width="20"></iconify-icon>
+                </button>
+            </div>
+            <div class="space-y-4 text-gray-400 font-light text-sm leading-relaxed">
+                <p>Las cookies son pequeños archivos de texto que se almacenan en tu dispositivo cuando visitas nuestro sitio web.</p>
+                <p><strong class="text-white">Tipos de cookies que utilizamos:</strong></p>
+                <ul class="list-disc list-inside space-y-1 ml-4">
+                    <li><strong class="text-gray-300">Técnicas:</strong> Necesarias para el funcionamiento básico del sitio.</li>
+                    <li><strong class="text-gray-300">Analíticas:</strong> Nos ayudan a entender cómo los usuarios interactúan con el sitio.</li>
+                    <li><strong class="text-gray-300">De preferencia:</strong> Permiten recordar tus configuraciones y preferencias.</li>
+                </ul>
+                <p><strong class="text-white">Gestión de cookies:</strong> Puedes aceptar o rechazar las cookies no esenciales a través del banner de cookies. También puedes configurar tu navegador para bloquear cookies.</p>
+                <p><strong class="text-white">Actualización:</strong> Esta política puede ser actualizada. Cualquier cambio será publicado en esta página.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Data Treatment Modal -->
+    <div id="dataModal" class="modal-overlay fixed inset-0 z-[60] hidden">
+        <div class="absolute inset-0 bg-black/70 backdrop-blur-sm" onclick="closeModal('dataModal')"></div>
+        <div class="modal-content absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#0A0A0A] border border-white/10 rounded-3xl p-8 max-w-2xl w-[90%] max-h-[80vh] overflow-y-auto">
+            <div class="flex items-center justify-between mb-6">
+                <h3 class="font-heading font-semibold text-2xl uppercase tracking-tight">Tratamiento de Datos</h3>
+                <button onclick="closeModal('dataModal')" class="modal-close-btn">
+                    <iconify-icon icon="lucide:x" width="20"></iconify-icon>
+                </button>
+            </div>
+            <div class="space-y-4 text-gray-400 font-light text-sm leading-relaxed">
+                <p>Al proporcionar tus datos personales a través de nuestros formularios, autorizas de manera expresa e informada lo siguiente:</p>
+                <ul class="list-disc list-inside space-y-2 ml-4">
+                    <li>La recolección y almacenamiento de tus datos personales (nombre, teléfono, correo electrónico, motivo de consulta).</li>
+                    <li>El uso de dichos datos para contacto, prestación de servicios e información institucional.</li>
+                    <li>El almacenamiento seguro de la información conforme a la Ley 1581 de 2012 (Habeas Data).</li>
+                </ul>
+                <p><strong class="text-white">Tus derechos:</strong> Como titular de los datos, puedes en cualquier momento solicitar el acceso, la rectificación, la actualización o la eliminación de tus datos personales contactándonos a través de contacto@capbiluka.com.</p>
+                <p><strong class="text-white">Base legal:</strong> Ley 1581 de 2012 y Decreto 1377 de 2013.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========== SCRIPTS ========== -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>

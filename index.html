@@ -42,6 +42,9 @@
         }
     </script>
 
+    <!-- SSL / HTTPS Security — Forces all resources to load over HTTPS -->
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/Logo.png">
     <link rel="apple-touch-icon" href="images/Logo.png">
@@ -49,7 +52,7 @@
 <body class="overflow-x-hidden">
 
     <!-- ========== NAVIGATION ========== -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="background:rgba(5,5,5,0.8);backdrop-filter:blur(12px);">
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500" style="backdrop-filter:blur(12px);">
         <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
             <a href="#inicio" class="flex items-center gap-3 group">
                 <img src="images/Logo.png" alt="CAP Biluka" class="w-10 h-10 rounded-lg object-cover group-hover:scale-110 transition-transform">
@@ -59,21 +62,43 @@
                 </div>
             </a>
             <div class="hidden lg:flex items-center gap-8">
-                <a href="#inicio" class="nav-link text-sm text-gray-300 hover:text-white">Inicio</a>
-                <a href="#nosotros" class="nav-link text-sm text-gray-300 hover:text-white">Nosotros</a>
-                <a href="#pilares" class="nav-link text-sm text-gray-300 hover:text-white">Pilares</a>
-                <a href="#servicios" class="nav-link text-sm text-gray-300 hover:text-white">Servicios</a>
-                <a href="#empleabilidad" class="nav-link text-sm text-gray-300 hover:text-white">Empleabilidad</a>
-                <a href="#donaciones" class="nav-link text-sm text-gray-300 hover:text-white">Donaciones</a>
-                <a href="#contacto" class="nav-link text-sm text-gray-300 hover:text-white">Contacto</a>
+                <a href="#inicio" class="nav-link text-sm">Inicio</a>
+                <a href="#nosotros" class="nav-link text-sm">Nosotros</a>
+                <a href="#pilares" class="nav-link text-sm">Pilares</a>
+                <a href="#servicios" class="nav-link text-sm">Servicios</a>
+                <a href="#empleabilidad" class="nav-link text-sm">Empleabilidad</a>
+                <a href="#donaciones" class="nav-link text-sm">Donaciones</a>
+                <a href="#contacto" class="nav-link text-sm">Contacto</a>
             </div>
-            <div class="hidden lg:flex items-center gap-3">
-                <a href="#donaciones" class="btn-outline px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white">Donar</a>
-                <a href="#contacto" class="btn-primary px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider text-white">Agendar Cita</a>
+            <div class="hidden lg:flex items-center gap-2">
+                <!-- Theme Toggle Switch -->
+                <button onclick="toggleTheme()" class="theme-switch" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+                    <span class="theme-switch-track">
+                        <span class="theme-switch-thumb">
+                            <iconify-icon icon="lucide:moon" class="thumb-icon thumb-moon" width="12"></iconify-icon>
+                            <iconify-icon icon="lucide:sun" class="thumb-icon thumb-sun" width="12"></iconify-icon>
+                        </span>
+                    </span>
+                </button>
+                <div class="w-px h-6 bg-white/10 mx-1"></div>
+                <a href="#donaciones" class="btn-outline px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider">Donar</a>
+                <a href="#contacto" class="btn-primary px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider">Agendar Cita</a>
             </div>
-            <button id="mobileMenuBtn" class="lg:hidden text-white p-2" aria-label="Abrir menú de navegación">
-                <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
-            </button>
+
+            <!-- Mobile Theme Toggle + Menu button -->
+            <div class="flex lg:hidden items-center gap-1">
+                <button onclick="toggleTheme()" class="theme-switch theme-switch-sm" aria-label="Cambiar tema claro/oscuro" title="Cambiar tema">
+                    <span class="theme-switch-track">
+                        <span class="theme-switch-thumb">
+                            <iconify-icon icon="lucide:moon" class="thumb-icon thumb-moon" width="10"></iconify-icon>
+                            <iconify-icon icon="lucide:sun" class="thumb-icon thumb-sun" width="10"></iconify-icon>
+                        </span>
+                    </span>
+                </button>
+                <button id="mobileMenuBtn" class="text-white p-2" aria-label="Abrir menú de navegación">
+                    <iconify-icon icon="lucide:menu" width="24"></iconify-icon>
+                </button>
+            </div>
         </div>
         <!-- Mobile Menu -->
         <div id="mobileMenu" class="lg:hidden hidden bg-[#0A0A0A] border-t border-white/5">

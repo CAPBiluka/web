@@ -280,6 +280,75 @@
     };
 
     // =============================================
+    // GALLERY LIGHTBOX
+    // =============================================
+    const galleryModal = document.getElementById('galleryModal');
+    const galleryModalImage = document.getElementById('galleryModalImage');
+    const galleryModalClose = document.getElementById('galleryModalClose');
+    const galleryModalPrev = document.getElementById('galleryModalPrev');
+    const galleryModalNext = document.getElementById('galleryModalNext');
+    let currentGalleryIndex = 0;
+    let galleryImages = [];
+
+    if (galleryModal && galleryModalImage && galleryModalClose && galleryModalPrev && galleryModalNext) {
+        // Get all gallery items
+        const galleryItems = document.querySelectorAll('.gallery-item');
+
+        galleryItems.forEach((item, index) => {
+            galleryImages.push(item.dataset.src);
+
+            item.addEventListener('click', () => {
+                currentGalleryIndex = index;
+                openGalleryModal(galleryImages[currentGalleryIndex]);
+            });
+        });
+
+        function openGalleryModal(src) {
+            galleryModalImage.src = src;
+            galleryModal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeGalleryModal() {
+            galleryModal.classList.add('hidden');
+            document.body.style.overflow = '';
+        }
+
+        galleryModalClose.addEventListener('click', closeGalleryModal);
+
+        galleryModal.addEventListener('click', (e) => {
+            if (e.target === galleryModal) {
+                closeGalleryModal();
+            }
+        });
+
+        galleryModalPrev.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+            galleryModalImage.src = galleryImages[currentGalleryIndex];
+        });
+
+        galleryModalNext.addEventListener('click', () => {
+            currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+            galleryModalImage.src = galleryImages[currentGalleryIndex];
+        });
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (!galleryModal.classList.contains('hidden')) {
+                if (e.key === 'Escape') {
+                    closeGalleryModal();
+                } else if (e.key === 'ArrowLeft') {
+                    currentGalleryIndex = (currentGalleryIndex - 1 + galleryImages.length) % galleryImages.length;
+                    galleryModalImage.src = galleryImages[currentGalleryIndex];
+                } else if (e.key === 'ArrowRight') {
+                    currentGalleryIndex = (currentGalleryIndex + 1) % galleryImages.length;
+                    galleryModalImage.src = galleryImages[currentGalleryIndex];
+                }
+            }
+        });
+    }
+
+    // =============================================
     // CONSOLE BRANDING
     // =============================================
     console.log(

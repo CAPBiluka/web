@@ -16,7 +16,7 @@
     --border-light: rgba(37, 99, 235, 0.18);
     
     --text-primary: #0f172a;
-    --text-white: #0f172a;
+    --text-white: #ffffff;
     --text-secondary: #1e293b;
     --text-tertiary: #334155;
     --text-muted: #64748b;
@@ -129,6 +129,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* === TAILWIND UTILITY OVERRIDES FOR THEME === */
 .text-white { color: var(--text-white) !important; }
+.text-white2 { color: var(--text-white) !important; }
 .text-gray-300 { color: var(--text-gray-300) !important; }
 .text-gray-400 { color: var(--text-gray-400) !important; }
 .text-gray-500 { color: var(--text-gray-500) !important; }
@@ -579,6 +580,58 @@ html {
 :root #empleabilidad h4.text-white,
 :root #empleabilidad p.text-white {
     color: #ffffff !important;
+}
+
+/* Donations form elements for light mode */
+:root #donaciones label.text-white,
+:root #donaciones .donation-amount {
+    color: rgb(255, 255, 255) !important;
+}
+
+/* Quienes somos page specific text colors for light mode */
+:root body.quienes-somos-page .quienes-content h2,
+:root body.quienes-somos-page .quienes-content p,
+:root body.quienes-somos-page .quienes-content .text-white,
+:root body.quienes-somos-page .quienes-content .text-white p,
+:root body.quienes-somos-page .quienes-content .text-white strong,
+:root body.quienes-somos-page .text-white2 {
+    color: #000000 !important;
+}
+
+/* Quienes somos page text colors for dark mode */
+[data-theme="dark"] body.quienes-somos-page .quienes-content h2,
+[data-theme="dark"] body.quienes-somos-page .quienes-content p,
+[data-theme="dark"] body.quienes-somos-page .quienes-content .text-white,
+[data-theme="dark"] body.quienes-somos-page .quienes-content .text-white p,
+[data-theme="dark"] body.quienes-somos-page .quienes-content .text-white strong,
+[data-theme="dark"] body.quienes-somos-page .text-white2,
+[data-theme="dark"] body.quienes-somos-page .quienes-content h3,
+[data-theme="dark"] body.quienes-somos-page .quienes-content p span {
+    color: #ffffff !important;
+}
+
+/* Co-founders images sizing for full visibility */
+body.quienes-somos-page img[alt="Cristian Camilo Gómez Gómez"],
+body.quienes-somos-page img[alt="July Johanna Nieto Benavides"] {
+    width: 200px !important;
+    height: 283px !important;
+    object-fit: contain !important;
+}
+
+@media (min-width: 768px) {
+    body.quienes-somos-page img[alt="Cristian Camilo Gómez Gómez"],
+    body.quienes-somos-page img[alt="July Johanna Nieto Benavides"] {
+        width: 250px !important;
+        height: 354px !important;
+    }
+}
+
+@media (min-width: 1024px) {
+    body.quienes-somos-page img[alt="Cristian Camilo Gómez Gómez"],
+    body.quienes-somos-page img[alt="July Johanna Nieto Benavides"] {
+        width: 300px !important;
+        height: 425px !important;
+    }
 }
 
 /* === MODALS === */

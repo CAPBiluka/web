@@ -130,6 +130,7 @@ h1, h2, h3, h4, h5, h6 {
 /* === TAILWIND UTILITY OVERRIDES FOR THEME === */
 .text-white { color: var(--text-white) !important; }
 .text-white2 { color: var(--text-white) !important; }
+.text-black { color: #000000 !important; }
 .text-gray-300 { color: var(--text-gray-300) !important; }
 .text-gray-400 { color: var(--text-gray-400) !important; }
 .text-gray-500 { color: var(--text-gray-500) !important; }

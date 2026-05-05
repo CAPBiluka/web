@@ -38,20 +38,39 @@
     }
 
     // =============================================
-    // NAVBAR SCROLL EFFECT
+    // NAVBAR SCROLL EFFECT — respects theme
     // =============================================
     const navbar = document.getElementById('navbar');
 
-    if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.style.background = 'rgba(5,5,5,0.95)';
+    function updateNavbarOnScroll() {
+        if (!navbar) return;
+        const theme = document.documentElement.getAttribute('data-theme') || 'light';
+        if (window.scrollY > 100) {
+            if (theme === 'light') {
+                navbar.style.background = '#ffffff';
                 navbar.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
             } else {
-                navbar.style.background = 'rgba(5,5,5,0.8)';
+                navbar.style.background = 'rgba(20,20,30,0.96)';
+                navbar.style.borderBottom = '1px solid rgba(255,255,255,0.08)';
+            }
+        } else {
+            if (theme === 'light') {
+                navbar.style.background = '#ffffff';
+                navbar.style.borderBottom = '1px solid rgba(255,255,255,0.05)';
+            } else {
+                navbar.style.background = 'rgba(30,30,40,0.92)';
                 navbar.style.borderBottom = 'none';
             }
-        });
+        }
+    }
+
+    if (navbar) {
+        window.addEventListener('scroll', updateNavbarOnScroll);
+        // Run once on load and whenever theme changes
+        updateNavbarOnScroll();
+        // Observer theme changes
+        const themeObserver = new MutationObserver(() => updateNavbarOnScroll());
+        themeObserver.observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     }
 
     // =============================================

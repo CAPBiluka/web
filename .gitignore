@@ -1,0 +1,36 @@
+# ===========================================
+# CAP Biluka — .gitignore
+# ===========================================
+
+# OS files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# IDE & Editor files
+.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+*.sublime-workspace
+
+# Node & dependencies (if using package managers later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Environment files
+.env
+.env.local
+.env.production
+
+# Build & deployment (if using build tools later)
+dist/
+build/
+*.zip
+*.tar.gz
+
+# Logs
+*.log
+npm-debug.log*

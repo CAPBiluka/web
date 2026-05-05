@@ -4,10 +4,10 @@
    =========================================== */
 
 /* === CSS CUSTOM PROPERTIES (THEMING) === */
-/* Light mode is the default (no data-theme attribute needed) */
+/* LIGHT MODE — only blue & white */
 :root,
 [data-theme="light"] {
-    --bg-primary: #f0f4ff;
+    --bg-primary: #ffffff;
     --bg-secondary: #ffffff;
     --bg-section-alt: #ffffff;
     --bg-tertiary: rgba(37, 99, 235, 0.04);
@@ -20,21 +20,21 @@
     --text-secondary: #1e293b;
     --text-tertiary: #334155;
     --text-muted: #64748b;
-    --text-gray-300: #334155;
-    --text-gray-400: #475569;
-    --text-gray-500: #64748b;
-    --text-gray-600: #94a3b8;
+    --text-gray-300: #1e293b;
+    --text-gray-400: #334155;
+    --text-gray-500: #475569;
+    --text-gray-600: #64748b;
     
-    --brand-purple: #2563eb;
-    --brand-purple-light: #3b82f6;
+    --brand: #2563eb;
+    --brand-light: #3b82f6;
     --brand-bg: rgba(37, 99, 235, 0.06);
     --brand-border: rgba(37, 99, 235, 0.2);
     --brand-icon: #2563eb;
     --brand-icon-bg: rgba(37, 99, 235, 0.08);
     
-    --navbar-bg: rgba(255, 255, 255, 0.88);
+    --navbar-bg: rgba(255, 255, 255, 0.95);
     --navbar-bg-scrolled: rgba(255, 255, 255, 0.98);
-    --navbar-border: rgba(37, 99, 235, 0.08);
+    --navbar-border: rgba(37, 99, 235, 0.15);
     
     --input-bg: #ffffff;
     --input-border: rgba(37, 99, 235, 0.2);
@@ -45,19 +45,19 @@
     --modal-overlay: rgba(15, 23, 42, 0.4);
     --blob-opacity: 0.06;
     --pillar-hover-shadow: 0 0 40px rgba(37, 99, 235, 0.12);
-    --bg-gradient-overlay: rgba(240, 244, 255, 0.5);
+    --bg-gradient-overlay: rgba(255, 255, 255, 0.5);
     --bg-floating-card: rgba(255, 255, 255, 0.85);
     --marquee-bg: #ffffff;
     --footer-bg: #ffffff;
     --cookie-banner-bg: #ffffff;
     --mobile-menu-bg: #ffffff;
-    --hero-gradient-dark: #f0f4ff;
+    --hero-gradient-dark: #ffffff;
     
     --gradient-from: #2563eb;
     --gradient-to: #3b82f6;
 }
 
-/* === DARK THEME === */
+/* === DARK THEME — black, light blue & white === */
 [data-theme="dark"] {
     --bg-primary: #050505;
     --bg-secondary: #0A0A0A;
@@ -77,12 +77,12 @@
     --text-gray-500: #6B7280;
     --text-gray-600: #4B5563;
     
-    --brand-purple: #5423E7;
-    --brand-purple-light: #a855f7;
-    --brand-bg: rgba(84, 35, 231, 0.1);
-    --brand-border: rgba(84, 35, 231, 0.3);
-    --brand-icon: #a855f7;
-    --brand-icon-bg: rgba(84, 35, 231, 0.1);
+    --brand: #3b82f6;
+    --brand-light: #60a5fa;
+    --brand-bg: rgba(59, 130, 246, 0.1);
+    --brand-border: rgba(59, 130, 246, 0.3);
+    --brand-icon: #60a5fa;
+    --brand-icon-bg: rgba(59, 130, 246, 0.1);
     
     --navbar-bg: rgba(5, 5, 5, 0.85);
     --navbar-bg-scrolled: rgba(5, 5, 5, 0.95);
@@ -96,7 +96,7 @@
     --scrollbar-bg: #0A0A0A;
     --modal-overlay: rgba(0, 0, 0, 0.7);
     --blob-opacity: 0.2;
-    --pillar-hover-shadow: 0 0 40px rgba(84, 35, 231, 0.2);
+    --pillar-hover-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
     --bg-gradient-overlay: rgba(5, 5, 5, 0.6);
     --bg-floating-card: rgba(0, 0, 0, 0.6);
     --marquee-bg: #0A0A0A;
@@ -105,8 +105,8 @@
     --mobile-menu-bg: #0A0A0A;
     --hero-gradient-dark: #050505;
     
-    --gradient-from: #5423E7;
-    --gradient-to: #a855f7;
+    --gradient-from: #3b82f6;
+    --gradient-to: #60a5fa;
 }
 
 /* === RESET & BASE === */
@@ -133,36 +133,103 @@ h1, h2, h3, h4, h5, h6 {
 .text-gray-400 { color: var(--text-gray-400) !important; }
 .text-gray-500 { color: var(--text-gray-500) !important; }
 .text-gray-600 { color: var(--text-gray-600) !important; }
-.text-purple-400 { color: var(--brand-icon) !important; }
-.text-purple-500 { color: var(--brand-purple-light) !important; }
-.text-purple-700 { color: var(--brand-purple) !important; }
-.text-purple-200 { color: var(--brand-purple-light) !important; }
-.text-purple-300 { color: var(--brand-purple-light) !important; }
+
+/* Force proper navbar text contrast */
+#navbar .nav-link {
+    color: #1e293b !important;
+}
+
+#navbar .nav-link:hover {
+    color: #2563eb !important;
+}
+
+[data-theme="dark"] #navbar .nav-link {
+    color: #d1d5db !important;
+}
+
+[data-theme="dark"] #navbar .nav-link:hover {
+    color: #60a5fa !important;
+}
+
+/* Brand icon color follows theme */
+.text-purple-400,
+.text-blue-400 { color: var(--brand-icon) !important; }
+.text-purple-500,
+.text-blue-500 { color: var(--brand-light) !important; }
+.text-purple-700,
+.text-blue-700 { color: var(--brand) !important; }
+.text-purple-200,
+.text-blue-200 { color: var(--brand-light) !important; }
+.text-purple-300,
+.text-blue-300 { color: var(--brand-light) !important; }
 
 .bg-white\/5 { background: var(--bg-tertiary) !important; }
 .bg-white\/\[0\.03\] { background: var(--bg-tertiary) !important; }
-.bg-\[0A0A0A\] { background: var(--bg-section-alt) !important; }
+
+/* Sections with forced dark background */
+.pilar-section,
+#empleabilidad,
+#donaciones,
+footer,
+.marquee-bg,
+.cookie-banner,
+#mobileMenu.bg-\[\#0A0A0A\],
+.bg-\[\#0A0A0A\] {
+    background: #0A0A0A !important;
+}
+
+/* Dark section overrides */
+.pilar-section .pilar-title,
+.pilar-section h3.font-heading {
+    color: #ffffff !important;
+}
+
+.pilar-section .pilar-desc,
+.pilar-section p.text-gray-400 {
+    color: #D1D5DB !important;
+}
+
+/* Cookie banner always dark */
+.cookie-banner {
+    background: #0A0A0A !important;
+}
+
+.cookie-banner .btn-outline {
+    color: #ffffff !important;
+    border-color: var(--brand);
+}
+
+.cookie-banner .btn-outline:hover {
+    color: #ffffff !important;
+    background: var(--brand);
+}
+
 .bg-black\/60 { background: var(--bg-floating-card) !important; }
 .bg-black\/70 { background: var(--modal-overlay) !important; }
-.bg-black\/90 { background: var(--bg-section-alt) !important; }
+.bg-black\/90 { background: #0A0A0A !important; }
 
 .border-white\/5 { border-color: var(--border-color) !important; }
 .border-white\/10 { border-color: var(--border-light) !important; }
 
-.border-\[#5423E7\]\/20 { border-color: var(--brand-border) !important; }
-.border-\[#5423E7\]\/30 { border-color: var(--brand-border) !important; }
+.border-\[#5423E7\]\/20,
+.border-blue-500\/20 { border-color: var(--brand-border) !important; }
+.border-\[#5423E7\]\/30,
+.border-blue-500\/30 { border-color: var(--brand-border) !important; }
 
 .from-\[\#050505\] { --tw-gradient-from: var(--bg-primary) !important; }
 .to-transparent { --tw-gradient-to: transparent !important; }
 
-.bg-\[#5423E7\]\/10 { background: var(--brand-icon-bg) !important; }
-.bg-\[#5423E7\]\/20 { background: var(--brand-bg) !important; }
-.bg-\[#5423E7\]\/30 { background: var(--brand-bg) !important; }
-.bg-\[#5423E7\] { background: var(--brand-purple) !important; }
-.bg-\[#5423E7\]\/20 { background: var(--brand-bg) !important; }
+.bg-\[#5423E7\]\/10,
+.bg-blue-500\/10 { background: var(--brand-icon-bg) !important; }
+.bg-\[#5423E7\]\/20,
+.bg-blue-500\/20 { background: var(--brand-bg) !important; }
+.bg-\[#5423E7\]\/30,
+.bg-blue-500\/30 { background: var(--brand-bg) !important; }
+.bg-\[#5423E7\],
+.bg-blue-500 { background: var(--brand) !important; }
 
-.from-\[#5423E7\]\/20 { --tw-gradient-from: color-mix(in srgb, var(--brand-purple) 20%, transparent) !important; }
-.to-purple-500\/10 { --tw-gradient-to: color-mix(in srgb, var(--brand-purple-light) 10%, transparent) !important; }
+.from-\[#5423E7\]\/20 { --tw-gradient-from: color-mix(in srgb, var(--brand) 20%, transparent) !important; }
+.to-purple-500\/10 { --tw-gradient-to: color-mix(in srgb, var(--brand-light) 10%, transparent) !important; }
 
 /* ANIMATIONS */
 @keyframes fadeIn {
@@ -274,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .theme-switch:hover .theme-switch-track {
-    border-color: var(--brand-purple-light);
+    border-color: var(--brand-light);
     background: var(--brand-bg);
 }
 
@@ -338,39 +405,39 @@ h1, h2, h3, h4, h5, h6 {
 
 /* === BUTTONS === */
 .btn-primary {
-    background: var(--brand-purple);
+    background: var(--brand);
     transition: all 0.3s ease;
     color: #fff !important;
 }
 
 .btn-primary:hover {
-    background: var(--brand-purple-light);
+    background: var(--brand-light);
     transform: translateY(-2px);
     box-shadow: 0 8px 30px rgba(37, 99, 235, 0.3);
 }
 
 .btn-outline {
-    border: 1px solid var(--brand-purple);
+    border: 1px solid var(--brand);
     transition: all 0.3s ease;
     color: var(--text-primary) !important;
 }
 
 .btn-outline:hover {
-    background: var(--brand-purple);
-    border-color: var(--brand-purple);
+    background: var(--brand);
+    border-color: var(--brand);
     color: #fff !important;
 }
 
 /* === PILLAR CARDS === */
 .pillar-card {
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-    background: var(--bg-card);
-    border-color: var(--border-color);
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(255, 255, 255, 0.05);
 }
 
 .pillar-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--pillar-hover-shadow);
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.2);
 }
 
 .pillar-card:hover .pillar-icon {
@@ -379,7 +446,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .pillar-icon {
     transition: all 0.5s ease;
-    background: var(--brand-icon-bg);
+    background: rgba(59, 130, 246, 0.1);
 }
 
 /* === SERVICE ITEMS === */
@@ -391,7 +458,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .service-item:hover {
     background: var(--brand-bg);
-    border-color: var(--brand-purple);
+    border-color: var(--brand);
 }
 
 /* === NAVBAR === */
@@ -414,7 +481,7 @@ h1, h2, h3, h4, h5, h6 {
     left: 0;
     width: 0;
     height: 2px;
-    background: var(--brand-purple);
+    background: var(--brand);
     transition: width 0.3s ease;
 }
 
@@ -453,8 +520,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .social-icon:hover {
-    color: var(--brand-purple-light);
-    border-color: var(--brand-purple);
+    color: var(--brand-light);
+    border-color: var(--brand);
 }
 
 /* === COOKIE BANNER === */
@@ -477,7 +544,7 @@ html {
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--brand-purple);
+    background: var(--brand);
     border-radius: 4px;
 }
 
@@ -528,8 +595,8 @@ html {
 
 .donation-amount:hover,
 .donation-amount.active {
-    background: var(--brand-purple);
-    border-color: var(--brand-purple);
+    background: var(--brand);
+    border-color: var(--brand);
     color: #fff;
 }
 
@@ -560,7 +627,7 @@ html {
 }
 
 .input-field:focus {
-    border-color: var(--brand-purple-light);
+    border-color: var(--brand-light);
 }
 
 /* === SELECT ARROW === */

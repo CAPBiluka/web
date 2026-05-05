@@ -555,6 +555,32 @@ html {
     width: max-content;
 }
 
+/* Marquee text color for light mode */
+:root .marquee-track span {
+    color: #ffffff !important;
+}
+
+/* Pillars section specific text colors for light mode */
+:root .pilar-section h2 span.text-white {
+    color: #ffffff !important;
+}
+
+/* Donations section text colors for light mode */
+:root #donaciones p.text-white,
+:root #donaciones p.text-white span,
+:root .pilar-section a.btn-primary .text-white,
+:root #donaciones button.btn-primary .text-white {
+    color: #ffffff !important;
+}
+
+/* Empleabilidad section text colors for light mode */
+:root #empleabilidad h2.text-white,
+:root #empleabilidad p.text-white,
+:root #empleabilidad h4.text-white,
+:root #empleabilidad p.text-white {
+    color: #ffffff !important;
+}
+
 /* === MODALS === */
 .modal-overlay {
     transition: opacity 0.3s ease;

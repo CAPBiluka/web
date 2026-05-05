@@ -1,0 +1,9 @@
+# ===========================================
+# CAP Biluka — Robots.txt
+# Centro de Apoyo Profesional
+# ===========================================
+
+User-agent: *
+Allow: /
+
+Sitemap: https://capbiluka.com/sitemap.xml

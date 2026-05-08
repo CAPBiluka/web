@@ -635,6 +635,31 @@ body.quienes-somos-page img[alt="July Johanna Nieto Benavides"] {
     }
 }
 
+/* === MOBILE MENU === */
+#mobileMenu {
+    background: var(--mobile-menu-bg) !important;
+}
+
+#mobileMenuBtn {
+    color: var(--text-primary) !important;
+}
+
+#mobileMenu a {
+    color: var(--text-secondary) !important;
+}
+
+#mobileMenu a:hover {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="light"] #mobileMenu a {
+    color: #1e293b !important;
+}
+
+[data-theme="light"] #mobileMenu a:hover {
+    color: #0f172a !important;
+}
+
 /* === MODALS === */
 .modal-overlay {
     transition: opacity 0.3s ease;
